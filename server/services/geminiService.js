@@ -32,12 +32,12 @@ function validateTurnShape(parsed) {
 // so retrying it just burns ~12 seconds of "thinking" time before
 // failing anyway. Detect that case and fail immediately instead.
 function isDailyQuotaExhausted(err) {
-  const text = JSON.stringify(err?.error || err || '');
+  const text = `${JSON.stringify(err?.error || '')} ${err?.message || ''}`;
   return /PerDay/i.test(text);
 }
 
 function isInvalidKey(err) {
-  const text = JSON.stringify(err?.error || err || '');
+  const text = `${JSON.stringify(err?.error || '')} ${err?.message || ''}`;
   const status = err?.status || err?.error?.status || '';
   return err?.code === 'MISSING_API_KEY'
     || status === 'INVALID_ARGUMENT' && /API key/i.test(text)
