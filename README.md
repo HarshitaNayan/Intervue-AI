@@ -19,8 +19,18 @@ An adaptive AI interview simulator for students and software engineers practicin
 Each visitor enters their own free Gemini API key in the browser. The key is stored only in that browser and never saved on the server. Get a free key at aistudio.google.com/apikey.
 
 ## 🚀 Running locally:-
-cd server && npm install && npm run dev
-cd client && npm install && npm run dev
+
+**Server** (in one terminal):
+
+cd server
+npm install
+npm run dev
+
+**Client** (in a separate terminal):
+
+cd client
+npm install
+npm run dev
 
 🔗 **Live demo:** https://intervue-ai-85b1.onrender.com
 
