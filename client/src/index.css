@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+::selection { background: rgba(58,90,140,0.16); color: #F3F1EC; }
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.animate-pulse-dot { animation: pulse-dot 2s infinite; }
+
+@keyframes rise-in {
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-rise-in {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: rise-in 0.9s cubic-bezier(.2,.7,.2,1) 0.15s forwards;
+}
+
+/* ---- Restrained interactivity ----
+   Deliberately NOT doing scale/lift/tilt/bounce on every button and
+   card — that kind of everything-pops effect is exactly what reads as
+   an unpolished, generated demo rather than a real product. Real
+   professional UI (Linear, Stripe, Notion) uses plain color/border
+   transitions and leaves geometry alone. */
+button:not(:disabled), a, [role="button"], input[type="submit"] {
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.card {
+  background: #14161a;
+  border: 1px solid #262a31;
+  border-radius: 10px;
+}
+
+/* ---- Floating 3D cubes (hero decoration) ---- */
+@keyframes cube-spin {
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to   { transform: rotateX(360deg) rotateY(360deg); }
+}
+@keyframes cube-float {
+  0%, 100% { transform: translateY(0px); }
+  50%      { transform: translateY(-16px); }
+}
+
+/* ---- Thin, unobtrusive scrollbars for the video column and transcript ---- */
+.slim-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #2E4066 transparent;
+}
+.slim-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.slim-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.slim-scroll::-webkit-scrollbar-thumb {
+  background-color: #2E4066;
+  border-radius: 999px;
+}
+
+@keyframes shape-spin {
+  0%, 100% { transform: perspective(600px) rotateX(15deg) rotateY(0deg) rotateZ(8deg); }
+  50%      { transform: perspective(600px) rotateX(-10deg) rotateY(180deg) rotateZ(-6deg); }
+}
+
+@keyframes glow-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(30px, -24px) scale(1.08); }
+}
+.animate-glow-drift {
+  animation: glow-drift 12s ease-in-out infinite;
+}
