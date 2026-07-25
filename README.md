@@ -23,3 +23,7 @@ cd server && npm install && npm run dev
 cd client && npm install && npm run dev
 
 🔗 **Live demo:** https://intervue-ai-85b1.onrender.com
+
+## 🌐 Browser Support:-
+
+Voice input works best on Chrome or Edge (tested on Android). If your browser doesn't support voice input, typing your answers works everywhere as a seamless fallback.
