@@ -23,13 +23,17 @@ Each visitor enters their own free Gemini API key in the browser. The key is sto
 **Server** (in one terminal):
 
 cd server
+
 npm install
+
 npm run dev
 
 **Client** (in a separate terminal):
 
 cd client
+
 npm install
+
 npm run dev
 
 🔗 **Live demo:** https://intervue-ai-85b1.onrender.com
