@@ -21,3 +21,5 @@ Each visitor enters their own free Gemini API key in the browser. The key is sto
 ## 🚀 Running locally:-
 cd server && npm install && npm run dev
 cd client && npm install && npm run dev
+
+🔗 **Live demo:** https://intervue-ai-85b1.onrender.com
