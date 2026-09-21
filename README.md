@@ -13,7 +13,7 @@ An adaptive AI interview simulator for students and software engineers practicin
 - Client: React + Vite + Tailwind CSS + Framer Motion
 - Server: Node.js + Express
 - AI: Google Gemini API
-- 🎙️ Web Speech API for voice input/output
+-  Web Speech API for voice input/output
 
 ## 🔑 Bring Your Own Key (BYOK):-
 Each visitor enters their own free Gemini API key in the browser. The key is stored only in that browser and never saved on the server. Get a free key at aistudio.google.com/apikey.
